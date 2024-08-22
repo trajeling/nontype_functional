@@ -47,7 +47,7 @@ template<class T, class Self>
 inline constexpr bool _is_not_self =
     not std::is_same_v<std::remove_cvref_t<T>, Self>;
 
-template<class T, template<class> class>
+template<class T, template<class...> class>
 inline constexpr bool _looks_nullable_to_impl = std::is_member_pointer_v<T>;
 
 template<class F, template<class> class Self>
