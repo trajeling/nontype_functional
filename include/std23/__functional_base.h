@@ -57,7 +57,7 @@ inline constexpr bool _looks_nullable_to_impl<F *, Self> =
 template<class... S, template<class...> class Self>
 inline constexpr bool _looks_nullable_to_impl<Self<S...>, Self> = true;
 
-template<class S, template<class> class Self>
+template<class S, template<class...> class Self>
 inline constexpr bool _looks_nullable_to =
     _looks_nullable_to_impl<std::remove_cvref_t<S>, Self>;
 
