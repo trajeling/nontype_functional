@@ -5,7 +5,7 @@
 [![CMake](https://github.com/zhihaoy/nontype_functional/actions/workflows/cmake.yml/badge.svg)](https://github.com/zhihaoy/nontype_functional/actions/workflows/cmake.yml)
 
 
-Provide complete implementation of `std::function`, `std::function_ref`, and `std::move_only_function` equivalent to those in the C++23 `<functional>` header.
+Provide complete implementation of `std::function`, `std::function_ref`, and `std::move_only_function` equivalent to those in the C++26 `<functional>` header.
 
 ## Highlights
 
@@ -23,6 +23,7 @@ The implementation does not guarantee the best performance under all use cases b
 | -------------------- | ---------------- | ------------------ |
 | GCC >= 11.1.0        | libstdc++        | Ubuntu 20.04       |
 | MSVC >= 14.30        | Microsoft STL    | Visual Studio 2022 |
+| Clang >= 17.0.6      | libc++           | Xcode 16.0         |
 
 
 ## Installation
@@ -114,7 +115,7 @@ cppreference page for [`std::function`](https://en.cppreference.com/w/cpp/utilit
 <br/>
 cppreference page for [`std::move_only_function`](https://en.cppreference.com/w/cpp/utility/functional/move_only_function)
 <br/>
-[`std::function_ref`](https://wg21.link/p0792r12#Wording) specification
+cppreference page for [`std::function_ref`](https://en.cppreference.com/w/cpp/utility/functional/function_ref)
 
 
 [^1]: Except for `std::function`'s `target()` member function, which is unimplemented because it requires RTTI.

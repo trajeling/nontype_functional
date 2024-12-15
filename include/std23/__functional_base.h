@@ -50,7 +50,7 @@ inline constexpr bool _is_not_self =
 template<class T, template<class...> class>
 inline constexpr bool _looks_nullable_to_impl = std::is_member_pointer_v<T>;
 
-template<class F, template<class> class Self>
+template<class F, template<class...> class Self>
 inline constexpr bool _looks_nullable_to_impl<F *, Self> =
     std::is_function_v<F>;
 
